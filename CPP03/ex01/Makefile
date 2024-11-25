@@ -18,6 +18,7 @@ CPP_03 = scavtrap
 
 CPP_03_SRC =	./main.cpp		\
 				./ClapTrap.cpp	\
+				./ScavTrap.cpp	\
 
 CPP_03_OBJ = $(CPP_03_SRC:.cpp=.o)
 

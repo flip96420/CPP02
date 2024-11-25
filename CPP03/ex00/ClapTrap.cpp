@@ -1,13 +1,39 @@
 #include "ClapTrap.hpp"
 
+ClapTrap::ClapTrap()
+{
+	this->name = "default";
+	this->hp = 10;
+	this->ap = 10;
+	this->dmg = 0;
+	std::cout	<< "Object " << '"' << this->name << '"'
+				<< " created." << std::endl;
+}
+
 ClapTrap::ClapTrap(std::string name)
 {
 	this->name = name;
 	this->hp = 10;
 	this->ap = 10;
-	this->dmg = 3;
+	this->dmg = 0;
 	std::cout	<< "Object " << '"' << this->name << '"'
 				<< " created." << std::endl;
+}
+
+ClapTrap::ClapTrap(const ClapTrap &copy)
+{
+	*this = copy;
+	std::cout	<< "Copy " << '"' << this->name << '"'
+				<< " created." << std::endl;
+}
+
+ClapTrap    &ClapTrap::operator=(const ClapTrap &copy)
+{
+	this->name = copy.get_name();
+	this->hp = copy.get_hp();
+	this->ap = copy.get_ap();
+	this->dmg = copy.get_dmg();
+	return (*this);
 }
 
 ClapTrap::~ClapTrap()
@@ -82,14 +108,19 @@ std::string	ClapTrap::get_name() const
 	return (this->name);
 }
 
-unsigned int	ClapTrap::get_dmg() const
-{
-	return (this->dmg);
-}
-
 unsigned int	ClapTrap::get_hp() const
 {
 	return (this->hp);
+}
+
+unsigned int	ClapTrap::get_ap() const
+{
+	return (this->ap);
+}
+
+unsigned int	ClapTrap::get_dmg() const
+{
+	return (this->dmg);
 }
 
 void	fight(ClapTrap *attacker, ClapTrap *defender)
