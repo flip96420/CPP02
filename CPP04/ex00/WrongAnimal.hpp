@@ -1,24 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cat.hpp                                            :+:      :+:    :+:   */
+/*   WrongAnimal.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pschmunk <pschmunk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/26 16:03:20 by pschmunk          #+#    #+#             */
-/*   Updated: 2024/11/26 17:03:29 by pschmunk         ###   ########.fr       */
+/*   Created: 2024/11/26 17:32:28 by pschmunk          #+#    #+#             */
+/*   Updated: 2024/11/26 17:33:07 by pschmunk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 
-# include "Animal.hpp"
+# include <iostream>
 
-class Cat : public Animal
+class WrongAnimal
 {
+	protected:
+		std::string	type;
 	public:
-		Cat();
-		~Cat();
-		Cat(const Cat &copy);
-		Cat		&operator=(const Cat &copy);
+		WrongAnimal();
+		~WrongAnimal();
+		WrongAnimal(const WrongAnimal &copy);
+		WrongAnimal	&operator=(const WrongAnimal &copy);
+		std::string	getType() const;
+		void		makeSound() const;
 };

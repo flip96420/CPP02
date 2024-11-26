@@ -1,24 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cat.hpp                                            :+:      :+:    :+:   */
+/*   WrongCat.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pschmunk <pschmunk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/26 16:03:20 by pschmunk          #+#    #+#             */
-/*   Updated: 2024/11/26 17:03:29 by pschmunk         ###   ########.fr       */
+/*   Created: 2024/11/26 17:38:43 by pschmunk          #+#    #+#             */
+/*   Updated: 2024/11/26 17:39:31 by pschmunk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 
-# include "Animal.hpp"
+# include "WrongAnimal.hpp"
 
-class Cat : public Animal
+class WrongCat : public WrongAnimal
 {
 	public:
-		Cat();
-		~Cat();
-		Cat(const Cat &copy);
-		Cat		&operator=(const Cat &copy);
+		WrongCat();
+		~WrongCat();
+		WrongCat(const WrongCat &copy);
+		WrongCat		&operator=(const WrongCat &copy);
 };

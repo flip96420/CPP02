@@ -2,13 +2,13 @@
 
 FragTrap::FragTrap()
 {
-	std::cout	<< "Object " << '"' << this->get_name() << '"'
+	std::cout	<< "Object " << '"' << this->name << '"'
 				<< " created. (FragTrap)" << std::endl;
 }
 
 FragTrap::FragTrap(const std::string &name) : ClapTrap(name)
 {
-	std::cout	<< "Ma Homie " << '"' << this->get_name() << '"'
+	std::cout	<< "Ma Homie " << '"' << this->name << '"'
 				<< " created from Class " 
 				<< '"' << "ClapTrap" << '"' << std::endl;
 }
@@ -16,7 +16,7 @@ FragTrap::FragTrap(const std::string &name) : ClapTrap(name)
 FragTrap::FragTrap(const FragTrap &copy)
 {
 	*this = copy;
-	std::cout	<< "Copy " << '"' << this->get_name() << '"'
+	std::cout	<< "Copy " << '"' << this->name << '"'
 				<< " created." << std::endl;
 }
 
@@ -28,13 +28,13 @@ FragTrap    &FragTrap::operator=(const FragTrap &copy)
 
 FragTrap::~FragTrap()
 {
-    std::cout	<< "Ma Homie " << '"' << this->get_name() << '"'
+    std::cout	<< "Ma Homie " << '"' << this->name << '"'
 				<< " destroyed. :'( (FragTrap)" << std::endl;
 }
 
 void	FragTrap::highFivesGuys()
 {
-	if (!this->get_hp())
+	if (!this->hp)
 		std::cout	<< this->get_name() << " is already dead. RIP :(" << std::endl;
 	else
 		std::cout	<< this->get_name() << ": C'mon. High Five Guys :DDDD???" << std::endl;

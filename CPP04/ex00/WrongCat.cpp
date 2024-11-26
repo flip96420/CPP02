@@ -1,58 +1,44 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Animal.cpp                                         :+:      :+:    :+:   */
+/*   WrongCat.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pschmunk <pschmunk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/26 15:49:10 by pschmunk          #+#    #+#             */
-/*   Updated: 2024/11/26 17:13:26 by pschmunk         ###   ########.fr       */
+/*   Created: 2024/11/26 17:36:54 by pschmunk          #+#    #+#             */
+/*   Updated: 2024/11/26 17:43:46 by pschmunk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Animal.hpp"
+#include "WrongCat.hpp"
 
-Animal::Animal() : type("empty")
+WrongCat::WrongCat() : WrongAnimal()
 {
+	this->type = "WrongCat";
 	std::cout	<< "Object type:" << '"' << this->type << '"'
 				<< " created from class "
-				<< '"' << "Animal" << '"' << std::endl;
+				<< '"' << "WrongAnimal" << '"' << std::endl;
 }
 
-Animal::~Animal()
+WrongCat::~WrongCat()
 {
 	std::cout	<< "Object type:" << '"' << this->type << '"'
 				<< " destroyed from class "
-				<< '"' << "Animal" << '"' << std::endl;
+				<< '"' << "WrongAnimal" << '"' << std::endl;
 }
 
-Animal::Animal(const Animal &copy)
+WrongCat::WrongCat(const WrongCat &copy) : WrongAnimal()
 {
+	*this = copy;
 	std::cout	<< "Copy type:" << '"' << this->type << '"'
 				<< " created from class "
-				<< '"' << "Animal" << '"' << std::endl;
-	*this = copy;
+				<< '"' << "WrongAnimal" << '"' << std::endl;
 }
 
-Animal	&Animal::operator=(const Animal &copy)
+WrongCat	&WrongCat::operator=(const WrongCat &copy)
 {
-	this->type = copy.getType();
+	WrongAnimal::operator=(copy);
 	std::cout	<< "Assignment operator created from class "
-				<< '"' << "Animal" << '"' << std::endl;
+				<< '"' << "WrongAnimal" << '"' << std::endl;
 	return (*this);
-}
-
-std::string	Animal::getType() const
-{
-	return(this->type);
-}
-
-void	Animal::makeSound() const
-{
-	if (this->type == "Cat")
-		std::cout	<< "Hello Everynyan! I wish i where a birde." << std::endl;
-	else if (this->type == "Dog")
-		std::cout	<< "Wuff im boring!" << std::endl;
-	else
-		std::cout	<< "Im some different cool ass typo' animal" << std::endl;
 }

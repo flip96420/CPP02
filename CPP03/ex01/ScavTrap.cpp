@@ -2,13 +2,13 @@
 
 ScavTrap::ScavTrap()
 {
-	std::cout	<< "Object " << '"' << this->get_name() << '"'
+	std::cout	<< "Object " << '"' << this->name << '"'
 				<< " created." << std::endl;
 }
 
 ScavTrap::ScavTrap(const std::string &name) : ClapTrap(name)
 {
-	std::cout	<< "Object " << '"' << this->get_name() << '"'
+	std::cout	<< "Object " << '"' << this->name << '"'
 				<< " created from Class " 
 				<< '"' << "ClapTrap" << '".' << std::endl;
 }
@@ -16,7 +16,7 @@ ScavTrap::ScavTrap(const std::string &name) : ClapTrap(name)
 ScavTrap::ScavTrap(const ScavTrap &copy)
 {
 	*this = copy;
-	std::cout	<< "Copy " << '"' << this->get_name() << '"'
+	std::cout	<< "Copy " << '"' << this->name << '"'
 				<< " created." << std::endl;
 }
 
@@ -28,14 +28,14 @@ ScavTrap    &ScavTrap::operator=(const ScavTrap &copy)
 
 ScavTrap::~ScavTrap()
 {
-    std::cout	<< "Object " << '"' << this->get_name() << '"'
+    std::cout	<< "Object " << '"' << this->name << '"'
 				<< " destroyed." << std::endl;
 }
 
 void    ScavTrap::guardGate()
 {
-    if (!this->get_hp())
-        std::cout	<< this->get_name() << " is already dead. RIP :(" << std::endl;
+    if (!this->hp)
+        std::cout	<< this->name << " is already dead. RIP :(" << std::endl;
 	else
-		std::cout	<< this->get_name() << " switched to Gate keeper mode." << std::endl;
+		std::cout	<< this->name << " switched to Gate keeper mode." << std::endl;
 }
