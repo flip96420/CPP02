@@ -6,7 +6,7 @@
 /*   By: pschmunk <pschmunk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/26 17:33:34 by pschmunk          #+#    #+#             */
-/*   Updated: 2024/11/26 17:44:15 by pschmunk         ###   ########.fr       */
+/*   Updated: 2024/11/26 18:32:13 by pschmunk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,11 +49,5 @@ std::string	WrongAnimal::getType() const
 
 void	WrongAnimal::makeSound() const
 {
-	if (this->type == "WrongCat")
-		std::cout	<< "Hello Everynyan! I wish i where a birde,"
-					<< " but unfortunately im not even a cat :(." << std::endl;
-	else if (this->type == "WrongDog")
-		std::cout	<< "Wauff im boring and not a dog, imma wrong dog!" << std::endl;
-	else
-		std::cout	<< "Im some different cool ass typo'  wrong animal" << std::endl;
+	std::cout	<< "Imma wrong animal" << std::endl;
 }

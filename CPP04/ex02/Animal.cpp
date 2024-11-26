@@ -6,7 +6,7 @@
 /*   By: pschmunk <pschmunk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/26 15:49:10 by pschmunk          #+#    #+#             */
-/*   Updated: 2024/11/26 18:14:36 by pschmunk         ###   ########.fr       */
+/*   Updated: 2024/11/26 18:28:05 by pschmunk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,14 +45,4 @@ Animal	&Animal::operator=(const Animal &copy)
 std::string	Animal::getType() const
 {
 	return(this->type);
-}
-
-void	Animal::makeSound() const
-{
-	if (this->type == "Cat")
-		std::cout	<< "Hello Everynyan! I wish i where a birde." << std::endl;
-	else if (this->type == "Dog")
-		std::cout	<< "Wuff im boring!" << std::endl;
-	else
-		std::cout	<< "Im some different cool ass typo' animal" << std::endl;
 }

@@ -6,7 +6,7 @@
 /*   By: pschmunk <pschmunk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/26 16:07:18 by pschmunk          #+#    #+#             */
-/*   Updated: 2024/11/26 17:52:43 by pschmunk         ###   ########.fr       */
+/*   Updated: 2024/11/26 18:30:52 by pschmunk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,4 +43,9 @@ Dog	&Dog::operator=(const Dog &copy)
 	std::cout	<< "Assignment operator created from class "
 				<< '"' << "Animal" << '"' << std::endl;
 	return (*this);
+}
+
+void	Dog::makeSound() const
+{
+	std::cout	<< "Wuff im boring!" << std::endl;
 }

@@ -6,7 +6,7 @@
 /*   By: pschmunk <pschmunk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/26 16:03:20 by pschmunk          #+#    #+#             */
-/*   Updated: 2024/11/26 17:49:48 by pschmunk         ###   ########.fr       */
+/*   Updated: 2024/11/26 18:30:27 by pschmunk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,4 +24,5 @@ class Dog : public Animal
 		~Dog();
 		Dog(const Dog &copy);
 		Dog		&operator=(const Dog &copy);
+		void	makeSound() const override;
 };

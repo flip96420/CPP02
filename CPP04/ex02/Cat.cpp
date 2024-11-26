@@ -6,7 +6,7 @@
 /*   By: pschmunk <pschmunk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/26 16:07:18 by pschmunk          #+#    #+#             */
-/*   Updated: 2024/11/26 17:52:05 by pschmunk         ###   ########.fr       */
+/*   Updated: 2024/11/26 18:25:25 by pschmunk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,4 +43,9 @@ Cat	&Cat::operator=(const Cat &copy)
 	std::cout	<< "Assignment operator created from class "
 				<< '"' << "Animal" << '"' << std::endl;
 	return (*this);
+}
+
+void	Cat::makeSound() const
+{
+	std::cout	<< "Hello Everynyan! I wish i where a birde." << std::endl;
 }

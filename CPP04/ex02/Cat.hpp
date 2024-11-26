@@ -6,7 +6,7 @@
 /*   By: pschmunk <pschmunk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/26 16:03:20 by pschmunk          #+#    #+#             */
-/*   Updated: 2024/11/26 17:50:51 by pschmunk         ###   ########.fr       */
+/*   Updated: 2024/11/26 18:23:35 by pschmunk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,4 +24,5 @@ class Cat : public Animal
 		~Cat();
 		Cat(const Cat &copy);
 		Cat		&operator=(const Cat &copy);
+		void	makeSound() const override;
 };
